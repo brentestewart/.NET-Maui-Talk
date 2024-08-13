@@ -7,6 +7,9 @@ public partial class App : Application
     {
         InitializeComponent();
 
+        // Force the app to use the light theme
+        //UserAppTheme = AppTheme.Light;
+        
         MainPage = new AppShell();
     }
 
