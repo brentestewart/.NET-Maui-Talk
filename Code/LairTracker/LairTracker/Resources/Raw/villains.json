@@ -8,7 +8,7 @@
     "lairLongitude": -74.0134,
     "lairLatitude": 40.7127,
     "lairLocation": "Fisk Tower, New York City, USA",
-    "imageUrl": "Kingpin.jpg"
+    "imageUrl": "kingpin.jpg"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "lairLongitude": -73.9776,
     "lairLatitude": 40.7549,
     "lairLocation": "LexCorp Tower, New York City, USA",
-    "imageUrl": "Lex Luthor.jpg"
+    "imageUrl": "lex_luthor.jpg"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "lairLongitude": -73.9854,
     "lairLatitude": 40.5743,
     "lairLocation": "Coney Island, New York City, USA",
-    "imageUrl": "Joker.jpg"
+    "imageUrl": "joker.jpg"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "lairLongitude": 79.7257,
     "lairLatitude": 30.3762,
     "lairLocation": "The Lazarus Pit, Himalayas, India",
-    "imageUrl": "Ra's al Ghul.jpg"
+    "imageUrl": "ras_al_ghul.jpg"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "lairLongitude": 19.1783,
     "lairLatitude": 50.0355,
     "lairLocation": "Auschwitz Concentration Camp, Poland",
-    "imageUrl": "Magneto.jpg"
+    "imageUrl": "magneto.jpg"
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "lairLongitude": 10.4219,
     "lairLatitude": 59.2906,
     "lairLocation": "Hydra Base, Norway",
-    "imageUrl": "Red Skull.jpg"
+    "imageUrl": "red_skull.jpg"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "lairLongitude": 142.7737,
     "lairLatitude": 63.4641,
     "lairLocation": "Siberia, Russia",
-    "imageUrl": "Rasputin.jpg"
+    "imageUrl": "rasputin.jpg"
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "lairLongitude": -73.9741,
     "lairLatitude": 40.7618,
     "lairLocation": "Iceberg Lounge, New York City, USA",
-    "imageUrl": "The Penguin.jpg"
+    "imageUrl": "the_penguin.jpg"
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
     "lairLongitude": -74.0060,
     "lairLatitude": 40.7128,
     "lairLocation": "Abandoned buildings, Gotham City (New York City), USA",
-    "imageUrl": "Victor Zsasz.jpg"
+    "imageUrl": "victor_zsasz.jpg"
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
     "lairLongitude": 110.2905,
     "lairLatitude": 25.2736,
     "lairLocation": "The Valley of Spirits, China",
-    "imageUrl": "The Mandarin.jpg"
+    "imageUrl": "the_mandarin.jpg"
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
     "lairLongitude": -74.0060,
     "lairLatitude": 40.7128,
     "lairLocation": "Various mafia hideouts, Gotham City (New York City), USA",
-    "imageUrl": "Carmine Falcone.jpg"
+    "imageUrl": "carmine_falcone.jpg"
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
     "lairLongitude": -74.0060,
     "lairLatitude": 40.7128,
     "lairLocation": "Arkham Asylum, Gotham City (New York City), USA",
-    "imageUrl": "Hugo Strange.jpg"
+    "imageUrl": "hugo_strange.jpg"
   },
   {
     "id": 13,
@@ -140,7 +140,7 @@
     "lairLongitude": 35.4444,
     "lairLatitude": 30.3285,
     "lairLocation": "Lazarus Pit, Petra, Jordan",
-    "imageUrl": "Talia al Ghul.jpg"
+    "imageUrl": "talia_al_ghul.jpg"
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
     "lairLongitude": -66.5901,
     "lairLatitude": 18.2208,
     "lairLocation": "Peña Duro Prison, Puerto Rico",
-    "imageUrl": "Bane.jpg"
+    "imageUrl": "bane.jpg"
   },
   {
     "id": 15,
@@ -162,7 +162,7 @@
     "lairLongitude": -74.0060,
     "lairLatitude": 40.7128,
     "lairLocation": "Abandoned Asylum, Gotham City (New York City), USA",
-    "imageUrl": "Scarecrow.jpg"
+    "imageUrl": "scarecrow.jpg"
   },
   {
     "id": 16,
@@ -173,7 +173,7 @@
     "lairLongitude": 114.1694,
     "lairLatitude": 22.3193,
     "lairLocation": "Hong Kong, China",
-    "imageUrl": "Lady Shiva.jpg"
+    "imageUrl": "lady_shiva.jpg"
   },
   {
     "id": 17,
@@ -184,7 +184,7 @@
     "lairLongitude": -60.0217,
     "lairLatitude": -3.1190,
     "lairLocation": "Amazon Rainforest, Manaus, Brazil",
-    "imageUrl": "Cheetah.jpg"
+    "imageUrl": "cheetah.jpg"
   },
   {
     "id": 18,
@@ -195,7 +195,7 @@
     "lairLongitude": -74.0060,
     "lairLatitude": 40.7128,
     "lairLocation": "Abandoned warehouse, New York City, USA",
-    "imageUrl": "Vulture.jpg"
+    "imageUrl": "vulture.jpg"
   },
   {
     "id": 19,
@@ -206,7 +206,7 @@
     "lairLongitude": 8.9635,
     "lairLatitude": 50.2812,
     "lairLocation": "Castle Doom, Latveria (fictional, inspired by German castles)",
-    "imageUrl": "Doctor Doom.jpg"
+    "imageUrl": "doctor_doom.jpg"
   },
   {
     "id": 20,
@@ -217,7 +217,7 @@
     "lairLongitude": -118.2437,
     "lairLatitude": 34.0522,
     "lairLocation": "Underground Bunker, Los Angeles, USA",
-    "imageUrl": "Ultron.jpg"
+    "imageUrl": "ultron.jpg"
   },
   {
       "id": 21,
@@ -228,7 +228,7 @@
       "lairLongitude": 35.3333,
       "lairLatitude": -2.3333,
       "lairLocation": "Pride Rock, Serengeti, Tanzania",
-      "imageUrl": "Scar.jpg"
+      "imageUrl": "scar.jpg"
   },
   {
       "id": 22,
@@ -239,7 +239,7 @@
       "lairLongitude": 27.1484,
       "lairLatitude": 38.4188,
       "lairLocation": "Aegean Sea, near Greece",
-      "imageUrl": "Ursula.jpg"
+      "imageUrl": "ursula.jpg"
   },
   {
       "id": 23,
@@ -250,7 +250,7 @@
       "lairLongitude": 6.8650,
       "lairLatitude": 45.8326,
       "lairLocation": "Alps, France",
-      "imageUrl": "Maleficent.jpg"
+      "imageUrl": "maleficent.jpg"
   },
   {
       "id": 24,
@@ -261,7 +261,7 @@
       "lairLongitude": 39.8262,
       "lairLatitude": 21.4225,
       "lairLocation": "Agrabah Palace (inspired by Mecca), Saudi Arabia",
-      "imageUrl": "Jafar.jpg"
+      "imageUrl": "jafar.jpg"
   },
   {
       "id": 25,
@@ -272,6 +272,6 @@
       "lairLongitude": -0.1420,
       "lairLatitude": 51.5014,
       "lairLocation": "London, England",
-      "imageUrl": "Cruella de Vil.jpg"
+      "imageUrl": "cruella_de_vil.jpg"
   }
 ]

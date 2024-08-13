@@ -3,37 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LairTracker.Views.VillainsPage"
              xmlns:models="clr-namespace:LairTracker.Models"
+             xmlns:viewModels="clr-namespace:LairTracker.ViewModels"
+             x:DataType="viewModels:VillainsViewModel"
              Title="Villians">
-    <CollectionView>
-        <CollectionView.ItemsSource>
-            <x:Array Type="{x:Type models:Villain}">
-                <models:Villain Name="Red Skull" LairLocation="Hydra Base, Norway" ImageUrl="red_skull.jpg" />
-                <models:Villain Name="Lex Luthor" LairLocation="LexCorp Tower, New York City, USA" ImageUrl="lex_luthor.jpg" />
-                <models:Villain Name="Joker" LairLocation="Coney Island, New York City, USA" ImageUrl="joker.jpg" />
-                <models:Villain Name="Kingpin" LairLocation="Fisk Tower, New York City, USA" ImageUrl="kingpin.jpg" />
-                <models:Villain Name="Ra's ah Ghul" LairLocation="The Lazarus Pit, Himalayas, India" ImageUrl="ras_al_ghul.jpg" />
-                <models:Villain Name="Magneto" LairLocation="Auschwitz Concentration Camp, Poland" ImageUrl="magneto.jpg" />
-                <models:Villain Name="Rasputin" LairLocation="Siberia, Russia" ImageUrl="rasputin.jpg" />
-                <models:Villain Name="The Penguin" LairLocation="Iceberg Lounge, New York City, USA" ImageUrl="the_penguin.jpg" />
-            </x:Array>
-        </CollectionView.ItemsSource>
-        <CollectionView.ItemsLayout>
-            <LinearItemsLayout Orientation="Vertical" ItemSpacing="0" />
-        </CollectionView.ItemsLayout>
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <Frame Margin="5">
-                    <HorizontalStackLayout Spacing="10" Margin="10">
-                        <Frame Margin="0" Padding="0" BorderColor="Transparent" CornerRadius="10">
-                            <Image Source="{Binding ImageUrl}" HeightRequest="100" WidthRequest="100" Aspect="AspectFit"/>
+    <Grid RowDefinitions="*, Auto" ColumnDefinitions="*,*">
+        <CollectionView Grid.ColumnSpan="2" ItemsSource="{Binding Villains}">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="0" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Villain">
+                    <Grid Padding="5">
+                        <Frame HasShadow="True">
+                            <HorizontalStackLayout Spacing="10" Margin="10">
+                                <Frame Margin="0" Padding="0" BorderColor="Transparent" CornerRadius="10">
+                                    <Image Source="{Binding ImageUrl}" HeightRequest="100" WidthRequest="100" Aspect="AspectFit"/>
+                                </Frame>
+                                <VerticalStackLayout VerticalOptions="Center">
+                                    <Label Text="{Binding Name}" FontSize="24"/>
+                                    <Label Text="{Binding LairLocation}" FontSize="12"/>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
                         </Frame>
-                        <VerticalStackLayout VerticalOptions="Center">
-                            <Label Text="{Binding Name}" FontSize="24"/>
-                            <Label Text="{Binding LairLocation}" FontSize="12"/>
-                        </VerticalStackLayout>
-                    </HorizontalStackLayout>
-                </Frame>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Grid.Row="1" Grid.Column="0" Margin="8" IsEnabled="{Binding IsNotBusy}" Text="Get Villains" Command="{Binding LoadVillainsCommand}"/>
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           Background="{StaticResource DarkTransparent}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"
+                           Grid.RowSpan="1" Grid.ColumnSpan="2"
+                           Margin="0"/>
+    </Grid>
 </ContentPage>

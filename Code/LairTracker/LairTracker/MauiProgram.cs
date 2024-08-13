@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using LairTracker.Services;
+using LairTracker.ViewModels;
+using LairTracker.Views;
+using Microsoft.Extensions.Logging;
 
 namespace LairTracker;
 public static class MauiProgram
@@ -13,6 +16,12 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
+
+        builder.Services.AddSingleton<VillainsPage>();
+        
+        builder.Services.AddSingleton<VillainsViewModel>();
+        
+        builder.Services.AddSingleton<VillainService>();
 
 #if DEBUG
 		builder.Logging.AddDebug();
