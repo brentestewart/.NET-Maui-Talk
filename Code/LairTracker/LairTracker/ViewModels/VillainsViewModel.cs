@@ -10,11 +10,13 @@ namespace LairTracker.ViewModels;
 public partial class VillainsViewModel : BaseViewModel
 {
     public VillainService VillainService { get; }
+    public IConnectivity Connectivity { get; }
     public ObservableCollection<Villain> Villains { get; } = new();
 
-    public VillainsViewModel(VillainService villainService)
+    public VillainsViewModel(VillainService villainService, IConnectivity connectivity)
     {
         VillainService = villainService;
+        Connectivity = connectivity;
         Title = "Villains List";
     }
 
@@ -28,6 +30,12 @@ public partial class VillainsViewModel : BaseViewModel
 
         try
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await Shell.Current.DisplayAlert("No Connection", "Please check your internet connection", "OK");
+                return;
+            }
+
             IsBusy = true;
             var villains = await VillainService.GetVillains();
             Villains.Clear();

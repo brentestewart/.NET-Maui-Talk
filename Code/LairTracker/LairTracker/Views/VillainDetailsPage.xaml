@@ -7,7 +7,7 @@
              x:DataType="viewModels:VillainDetailsViewModel"
              Title="{Binding Villain.Name}">
     <ScrollView>
-        <VerticalStackLayout>
+        <Grid RowDefinitions="Auto,Auto,*,Auto">
             <Grid ColumnDefinitions="*,Auto,*"
                   RowDefinitions="160,Auto">
                 <BoxView BackgroundColor="{StaticResource PrimaryDark}"
@@ -36,9 +36,21 @@
                 </Grid>
             </Grid>
 
-            <VerticalStackLayout Padding="10" Spacing="10">
+            <VerticalStackLayout Grid.Row="1" Padding="10" Spacing="10">
                 <Label Text="{Binding Villain.Details}" FontSize="24" HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding DistanceInMiles, StringFormat='{0} miles away'}" HorizontalTextAlignment="Center" FontSize="16"/>
             </VerticalStackLayout>
-        </VerticalStackLayout>
+            
+            <VerticalStackLayout Grid.Row="3" Padding="10" Spacing="10">
+                    <Button Text="Get Current Distance to Lair"
+                            Command="{Binding GetDistanceInMilesCommand}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White"/>
+                    <Button Text="Show Lair Location on Map"
+                            Command="{Binding ShowLairOnMapCommand}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White"/>
+            </VerticalStackLayout>
+        </Grid>
     </ScrollView>
 </ContentPage>

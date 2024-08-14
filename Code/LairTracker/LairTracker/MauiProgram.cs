@@ -18,12 +18,15 @@ public static class MauiProgram
             });
 
         builder.Services.AddSingleton<VillainsPage>();
-        builder.Services.AddSingleton<VillainDetailsPage>();
+        builder.Services.AddTransient<VillainDetailsPage>();
         
         builder.Services.AddSingleton<VillainsViewModel>();
-        builder.Services.AddSingleton<VillainDetailsViewModel>();
+        builder.Services.AddTransient<VillainDetailsViewModel>();
         
         builder.Services.AddSingleton<VillainService>();
+        builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
+        builder.Services.AddSingleton<IGeolocation>(Geolocation.Default);
+        builder.Services.AddSingleton<IMap>(Map.Default);
 
 #if DEBUG
 		builder.Logging.AddDebug();
