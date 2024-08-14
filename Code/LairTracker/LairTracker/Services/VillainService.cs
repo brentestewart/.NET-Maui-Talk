@@ -13,7 +13,7 @@ public class VillainService
 
     public async Task<List<Villain>> GetVillains()
     {
-        await Task.Delay(2000);
+        await Task.Delay(500);
 
         if (Villains.Count != 0)
         {

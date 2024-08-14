@@ -11,7 +11,7 @@ public partial class VillainDetailsViewModel(IGeolocation geolocation, IMap map)
     Villain villain;
 
     [ObservableProperty]
-    string distanceInMiles;
+    string distanceInMiles = "??";
 
     [RelayCommand]
     async Task GetDistanceInMiles()
@@ -39,7 +39,7 @@ public partial class VillainDetailsViewModel(IGeolocation geolocation, IMap map)
             }
 
             var distance = location.CalculateDistance(Villain.LairLatitude, Villain.LairLongitude, DistanceUnits.Miles);
-            DistanceInMiles = $"{distance:0.0} miles";
+            DistanceInMiles = $"{distance:#,###} miles";
         }
         catch (Exception ex)
         {

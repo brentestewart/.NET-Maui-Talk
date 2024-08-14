@@ -11,6 +11,15 @@
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Vertical" ItemSpacing="0" />
             </CollectionView.ItemsLayout>
+            <CollectionView.EmptyView>
+                <StackLayout VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             HeightRequest="400">
+                    <Label Text="Press the 'Get Villians' button to load the list of villains." 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>
+                </StackLayout>
+            </CollectionView.EmptyView>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:Villain">
                     <Grid Padding="5">
@@ -35,7 +44,7 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <Button Grid.Row="1" Grid.Column="0" Margin="8" IsEnabled="{Binding IsNotBusy}" Text="Get Villains" Command="{Binding LoadVillainsCommand}"/>
+        <Button Grid.Row="1" Grid.ColumnSpan="2" WidthRequest="200" Margin="8" IsEnabled="{Binding IsNotBusy}" Text="Get Villains" Command="{Binding LoadVillainsCommand}"/>
 
         <ActivityIndicator IsVisible="{Binding IsBusy}"
                            IsRunning="{Binding IsBusy}"
