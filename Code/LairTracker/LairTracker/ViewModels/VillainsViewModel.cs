@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using LairTracker.Models;
 using LairTracker.Services;
+using LairTracker.Views;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 
@@ -44,5 +45,20 @@ public partial class VillainsViewModel : BaseViewModel
         {
             IsBusy = false;
         }
+    }
+
+    [RelayCommand]
+    async Task GoToDetails(Villain villain)
+    {
+        if(villain == null)
+        {
+            return;
+        }
+
+        await Shell.Current.GoToAsync($"{nameof(VillainDetailsPage)}", true,
+            new Dictionary<string,object>
+            {
+                { "Villain", villain }
+            });
     }
 }

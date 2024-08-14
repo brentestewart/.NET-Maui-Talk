@@ -18,8 +18,10 @@ public static class MauiProgram
             });
 
         builder.Services.AddSingleton<VillainsPage>();
+        builder.Services.AddSingleton<VillainDetailsPage>();
         
         builder.Services.AddSingleton<VillainsViewModel>();
+        builder.Services.AddSingleton<VillainDetailsViewModel>();
         
         builder.Services.AddSingleton<VillainService>();
 

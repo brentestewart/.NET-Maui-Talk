@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LairTracker.Views.VillainDetailsPage"
+             xmlns:models="clr-namespace:LairTracker.Models"
+             xmlns:viewModels="clr-namespace:LairTracker.ViewModels"
+             x:DataType="viewModels:VillainDetailsViewModel"
+             Title="{Binding Villain.Name}">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid ColumnDefinitions="*,Auto,*"
+                  RowDefinitions="160,Auto">
+                <BoxView BackgroundColor="{StaticResource PrimaryDark}"
+                         Grid.ColumnSpan="3"
+                         HeightRequest="160"
+                         HorizontalOptions="FillAndExpand"/>
+                <Frame Grid.RowSpan="2"
+                       Grid.Column="1"
+                       HeightRequest="160"
+                       CornerRadius="80"
+                       HorizontalOptions="Center"
+                       IsClippedToBounds="True"
+                       Padding="0"
+                       Margin="0,80,0,0">
+                    <Image Aspect="AspectFill"
+                           HeightRequest="160"
+                           WidthRequest="160"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Source="{Binding Villain.ImageUrl}"/>
+                </Frame>
+                <Grid Grid.ColumnSpan="3" RowDefinitions="Auto,Auto,Auto" Padding="10">
+                    <Label Text="{Binding Villain.SecretIdentity, StringFormat='Real Name: {0}'}"/>
+                    <Label Grid.Row="1" Text="{Binding Villain.Affiliation, StringFormat='Affiliation: {0}'}"/>
+                    <Label Grid.Row="2" Grid.ColumnSpan="3" Text="{Binding Villain.LairLocation, StringFormat='Lair Location: {0}'}"/>
+                </Grid>
+            </Grid>
+
+            <VerticalStackLayout Padding="10" Spacing="10">
+                <Label Text="{Binding Villain.Details}" FontSize="24" HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
